@@ -1,0 +1,43 @@
+<mat-card>
+  <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="title"
+        ngModel
+        required
+        minlength="3"
+        placeholder="Post Title"
+        #title="ngModel">
+      <mat-error *ngIf="title.invalid">Please enter a comment title.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea
+        matInput
+        rows="1"
+        name="content"
+        ngModel
+        required
+        placeholder="Post Content"
+        #content="ngModel"></textarea>
+      <mat-error *ngIf="content.invalid">Please enter a comment content.</mat-error>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="accent"
+      type="submit">Save Comment</button>
+<!--    <h3>Please select </h3>-->
+<!--    <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">-->
+<!--      <button class="btn btn-outline-primary mr-2" id="dropdownManual" ngbDropdownAnchor (focus)="myDrop.open()">Toggle dropdown</button>-->
+<!--      <div ngbDropdownMenu aria-labelledby="dropdownManual">-->
+<!--        <button ngbDropdownItem>Action - 1</button>-->
+<!--        <button ngbDropdownItem>Another Action</button>-->
+<!--        <button ngbDropdownItem>Something else is here</button>-->
+<!--      </div>-->
+
+<!--      <button class="btn btn-outline-success mr-2" (click)="$event.stopPropagation(); myDrop.open();">Open from outside</button>-->
+<!--      <button class="btn btn-outline-danger mr-2" (click)="$event.stopPropagation(); myDrop.close();">Close from outside</button>-->
+<!--    </div>-->
+  </form>
+</mat-card>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>MongoDB Charts Visualization</title>
+
+  <script>
+      function renderSignedAuthChart(chartId, iframeId) {
+          const embedUrlRequest = new Request(`/api/embeddedchart/${chartId}`);
+          fetch(embedUrlRequest)
+              .then(response => response.text())
+              .then(url => {document.getElementById(iframeId).src = url});
+      }
+  </script>
+</head>
+<body>
+<h1 style="text-align: center">MongoDB Charts Embedding Example (Node)</h1>
+<div style="text-align: center;">
+  <iframe
+          width="640" height="480"
+          src="https://charts.mongodb.com/charts-project-0-hemjg/embed/charts?id=934af3e9-c077-4ee6-8266-346571b2cd8e&tenant=8ee3ed9e-305d-40a4-aba0-2da34f8dab42">
+  </iframe>
+</div>
+
+
+
+<script>
+    renderSignedAuthChart('934af3e9-c077-4ee6-8266-346571b2cd8e', 'embeddedChart');
+</script>
+
+</body>
+</html>
