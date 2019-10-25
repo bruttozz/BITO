@@ -14,6 +14,8 @@ Run `nodemon server.js` to start the server. Navigate to `http://localhost:3000/
 
 There are also three routing which can be accessed at `http://localhost:3000/personal`, `http://localhost:3000/about` and `http://localhost:3000/chart`.
 
+Please note that the database is based on MongoDB Atlas, please send me your IP address to my email: bruttozhao@gmail.com before you test this project. I need to add your IP address to my mongoDB project whitelist, after that you can have read & write access to it.
+
 ## Questions
 
 Please visit my website `https://www.bruttozhao.com` to learn more about me or send me email to bruttozhao@gmail.com.
